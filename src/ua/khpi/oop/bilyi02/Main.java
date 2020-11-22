@@ -7,8 +7,22 @@ public class Main {
  int rn = random.nextInt();
  for (int i = 0; i< 10; i++) {
 	 rn = random.nextInt();
- System.out.println("\nЧисло: "+rn+"\nРезультат: " + mn.findTheBigesNum(rn));
- }
+	 System.out.println("--------------------------------");
+	 System.out.println("|Число                Результат|");
+	 System.out.print("|"+ rn);
+	 int temp = rn;
+	 if (temp<0) {
+		 temp = temp * (-1);
+		 temp = 28 - findCount(temp);
+	 }
+	 else 
+		 temp = 29 - findCount(temp);
+	 for(int j = 0;j<temp;j++) {
+		 System.out.print(' ');
+	 }
+	 System.out.print(mn.findTheBigesNum(rn)+"|\n");
+	 System.out.println("--------------------------------");
+	 }
  }
  int findTheBigesNum(int num) {// нахождение найбольшей цифры
 	 if(num<0)
