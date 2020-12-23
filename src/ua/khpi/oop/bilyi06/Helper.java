@@ -3,7 +3,7 @@ package ua.khpi.oop.bilyi06;
 public class Helper {
 
  
- private static int mean = 0;
+ private static float mean = 0;
  	public static void start(String ln) {
 		if(ln == null) {
 			throw new NullPointerException("line is null");
@@ -57,7 +57,7 @@ public class Helper {
  	
  	
 	static private void findmean(MyCollection line) {
-		int m = 0;
+		float m = 0;
 		for(int i =0;i<line.size();i++)
 		m+=line.get(i).length();
 		setMean(m/line.size());
@@ -87,23 +87,23 @@ public class Helper {
 		
 		System.out.println("Lines are greater than average: ");
 		for(var n : line) {
-			if(n.length() >= mean) {
+			if((float)n.length() >= mean) {
 				System.out.println(n+"\nLine lenght:" + n.length());
 				
 			}
 		}
 		System.out.println("Lines less than average: ");
 		for(var n : line) {
-			if(n.length() < mean) {
+			if((float) n.length() < mean) {
 				System.out.println(n +"\nLine lenght:" + n.length());
 				}
 		}
 	}
 	
-	public static int getMean() {
+	public static float getMean() {
 		return mean;
 	}
-	public static void setMean(int mean) {
+	public static void setMean(float mean) {
 		Helper.mean = mean;
 	}
 	
