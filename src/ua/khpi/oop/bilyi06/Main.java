@@ -6,7 +6,10 @@ import ua.khpi.oop.yampolskyi03.*;
 
 public class Main {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
-		Menu();
+		
+		
+		
+		//Menu();
 	}
 	public static void Menu() {
 		boolean prz = true;

@@ -15,6 +15,7 @@ public class Main {
 		collection.add("Вторая");
 		collection.add("Третья");
 		collection.add("Четвертая");
+		System.out.println(collection);
 		
 		for(var str : collection)
 		{
@@ -24,6 +25,8 @@ public class Main {
 		while(it.hasNext()) {
 			System.out.println(it.next());
 		}
+		
+		
 	}
 	
 }

@@ -22,11 +22,14 @@ public class Dir {
 				  {
 
 				    
-				      if(new File(f, name).isDirectory()) 
+				      if(new File(f, name).isDirectory()) {
+				    	  scan.close();
 				    	  return true;
-				    else
+				      }
+				    else {
+				    	scan.close();
 				      return(name.endsWith("xml"));  
-				  
+				    }
 				}
 			});
 			System.out.println();
@@ -57,13 +60,14 @@ public class Dir {
 		if(dir.isFile())
 		{
 		
-		
+		scan.close();
 		 return path;
 		}
 		
 		
 		}while(true);
 
+		scan.close(); 
 		
 		return new String("DONTDOWNLOAD");
 	}

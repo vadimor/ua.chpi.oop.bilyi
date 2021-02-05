@@ -9,6 +9,7 @@ public class MyCollection implements Iterable<String> {
 		this.Size = mass.length;
 		this.ActualSize= mass.length;
 	}
+	
 	public String[] getMass() {
 		var masst = new String[Size];
 		for(int i = 0; i<Size; i++) {
